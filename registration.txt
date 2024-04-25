@@ -110,7 +110,11 @@ button:hover {
             if (Lastname ===""){
                 LastnameError.textContent ="Please enter your last name";
                 isValid = false;
-            }else if(!isValidEmail(email)) {
+            }
+
+ if (email === "") {
+          emailError.textContent = "Please enter your email address";
+          isValid = false;}else if(!isValidEmail(email)) {
                 emailError.textContent = "Please enter your email address";
                 isValid = false;
             }
